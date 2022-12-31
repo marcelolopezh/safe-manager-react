@@ -1,5 +1,5 @@
 export const createRegistroPago = async (dataForm) => {
-  const url = `http://192.168.1.3:8080/transaccion/crear`;
+  const url = `${process.env.REACT_APP_API_URL}/transaccion/crear`;
   try {
     const response = await fetch(url, {
       method: "POST",

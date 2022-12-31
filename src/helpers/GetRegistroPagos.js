@@ -1,5 +1,5 @@
 export const getRegistroPagos = async (ordenamiento) => {
-  let url = `http://192.168.1.3:8080/transaccion/obtener-${ordenamiento}`;
+  let url = `${process.env.REACT_APP_API_URL}/transaccion/obtener-${ordenamiento}`;
   try {
     const response = await fetch(url, {
       method: "GET",
